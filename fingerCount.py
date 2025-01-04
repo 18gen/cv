@@ -8,7 +8,8 @@ cap.set(4, 480)  # height
 
 # 手の画像が含まれているフォルダを指定して、ファイル名を取得する 
 folderpath = "images"
-img_list = os.listdir(folderpath)
+# img_list = os.listdir(folderpath)
+img_list = sorted(os.listdir(folderpath), key=lambda x: int(x.split('.')[0]))
 
 # 手の画像を読み込む
 finger_imgs = []
